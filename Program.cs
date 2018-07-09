@@ -10,6 +10,7 @@ namespace cSharp_basic_homework_1
             int [] ResultOfProblemOne = ProblemOne();
             int [] ResultOfProblemTwo = ProblemTwo(ResultOfProblemOne);
             BigInteger [] ResultOfProblemThree = ProblemThree(100,171,250);
+            double [] ResultOfProblemFour = ProblemFour();
             Console.WriteLine("Problem One : ");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(ResultOfProblemOne[i]);
@@ -27,6 +28,9 @@ namespace cSharp_basic_homework_1
             Console.WriteLine("100! = "+ResultOfProblemThree[0]);
             Console.WriteLine("171! = "+ResultOfProblemThree[1]);
             Console.WriteLine("250! = "+ResultOfProblemThree[2]);
+            Console.WriteLine("Problem  four :");
+            for(int i = 0; i < 3; i++)
+                Console.WriteLine(i+1+".  "+ResultOfProblemFour[i]);
         }
         /*
         Problem 1.Some Primes
@@ -60,6 +64,21 @@ namespace cSharp_basic_homework_1
             CacheArray[1] = n2;
             CacheArray[2] = n3;
             return Number.Factarial(CacheArray);
+        }
+        /*
+        Problem 4.Calculate Hypotenuse
+        You are given three right angled triangles. Find the length of their hypotenuses.
+        1.Catheti: 3 and 4
+        2.Catheti:  10 and 12
+        3.Catheti 100 and 250
+         */
+        static double[] ProblemFour()
+        {
+            double[] CacheArray = new double[3];
+            CacheArray[0] = Number.Hypotenuse(3,4);
+            CacheArray[1] = Number.Hypotenuse(10,12);
+            CacheArray[2] = Number.Hypotenuse(100,250);
+            return CacheArray;
         }
     }
     class Number 
@@ -124,6 +143,10 @@ namespace cSharp_basic_homework_1
                     Result[i]*=CacheArray[i]--;
             }
             return Result;
+        }
+        public static double Hypotenuse(double a, double b)
+        {
+            return Math.Sqrt(a*a+b*b);
         }
     }
 }
