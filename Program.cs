@@ -8,26 +8,18 @@ namespace cSharp_basic_homework_1
         static void Main(string[] args)
         {
             int [] ResultOfProblemOne = ProblemOne();
-            int [] ResultOfProblemTwo = ProblemTwo(ResultOfProblemOne);
-            BigInteger [] ResultOfProblemThree = ProblemThree(100,171,250);
+            String [] ResultOfProblemTwo = ProblemTwo(ResultOfProblemOne);
+            String [] ResultOfProblemThree = ProblemThree();
             double [] ResultOfProblemFour = ProblemFour();
-            Console.WriteLine("Problem One : ");
+            Console.WriteLine("Problem one : ");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(ResultOfProblemOne[i]);
-            Console.WriteLine("Problem Two : ");
+            Console.WriteLine("Problem two : ");
             for(int i = 0; i < 3; i++)
-            {
-                string CacheString;
-                if(ResultOfProblemTwo[i] != 0)
-                    CacheString =  $"{ResultOfProblemOne[i]} prime number is {ResultOfProblemTwo[i]} Fibonacci";
-                else
-                    CacheString =  $"This prime number is not Fibonacci number";
-                Console.WriteLine(CacheString);
-            }
+                Console.WriteLine(ResultOfProblemTwo[i]);
             Console.WriteLine("Problem  three :");
-            Console.WriteLine("100! = "+ResultOfProblemThree[0]);
-            Console.WriteLine("171! = "+ResultOfProblemThree[1]);
-            Console.WriteLine("250! = "+ResultOfProblemThree[2]);
+            for(int i = 0; i < 3; i++)
+                Console.WriteLine(ResultOfProblemThree[i]);
             Console.WriteLine("Problem  four :");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(i+1+".  "+ResultOfProblemFour[i]);
@@ -38,10 +30,10 @@ namespace cSharp_basic_homework_1
          */
         static int[] ProblemOne()
         {
+            int[] CacheArray = {24, 101, 251};
             int [] ArrayOfSomePrimeNumbers = new int[3];
-            ArrayOfSomePrimeNumbers[0] = Number.PrimeNumber(24);
-            ArrayOfSomePrimeNumbers[1] = Number.PrimeNumber(101);
-            ArrayOfSomePrimeNumbers[2] = Number.PrimeNumber(251);
+            for(int i = 0; i < 3; i++) 
+                ArrayOfSomePrimeNumbers[i] = Number.PrimeNumber(CacheArray[i]);
             return ArrayOfSomePrimeNumbers;
         }
         /*
@@ -49,21 +41,31 @@ namespace cSharp_basic_homework_1
         Check if the 24th, 101st and 251st prime numbers are part
         of the base Fibonacci number set. What is their position? 
         */
-        static int[] ProblemTwo(int[] InArray)
+        static String[] ProblemTwo(int[] InArray)
         {
-            return Number.FibonacciPrimes(InArray);
+            int [] ResultOfProblemTwo = Number.FibonacciPrimes(InArray);
+            String[] CacheString = new String[3];
+            for(int i = 0; i < 3; i++)
+            {
+                if(ResultOfProblemTwo[i] != 0)
+                    CacheString[i] =  $"{InArray[i]} prime number is {ResultOfProblemTwo[i]} Fibonacci";
+                else
+                    CacheString[i] =  $"{InArray[i]} prime number is not Fibonacci number";
+            }
+            return CacheString;
         }
         /*
         Problem 3.Some Factorials
         Find 100!, 171! and 250! Give all digits.
         */
-        static BigInteger[] ProblemThree(int n1, int n2, int n3)
+        static String[] ProblemThree()
         {
-            int[] CacheArray = new int[3];
-            CacheArray[0] = n1;
-            CacheArray[1] = n2;
-            CacheArray[2] = n3;
-            return Number.Factarial(CacheArray);
+            int[] CacheArray = {100, 171, 250};
+            BigInteger[] ResultOfProblemThree = Number.Factarial((int[])CacheArray.Clone());
+            String[] CacheString = new String[3];
+            for(int i = 0; i < 3; i++)
+                CacheString[i] = ($"{CacheArray[i]}! = {ResultOfProblemThree[i]}");
+            return CacheString;
         }
         /*
         Problem 4.Calculate Hypotenuse
