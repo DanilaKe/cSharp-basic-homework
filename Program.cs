@@ -11,6 +11,7 @@ namespace cSharp_basic_homework_1
             String [] ResultOfProblemTwo = ProblemTwo(ResultOfProblemOne);
             String [] ResultOfProblemThree = ProblemThree();
             double [] ResultOfProblemFour = ProblemFour();
+            String [] ResultOfProblemFive = ProblemFive();
             Console.WriteLine("Problem one : ");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(ResultOfProblemOne[i]);
@@ -23,6 +24,10 @@ namespace cSharp_basic_homework_1
             Console.WriteLine("Problem  four :");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(i+1+".  "+ResultOfProblemFour[i]);
+            Console.WriteLine("Problem  five :");
+            for(int i = 0; i < 6; i++)
+                Console.WriteLine(ResultOfProblemFive[i]);
+
         }
         /*
         Problem 1.Some Primes
@@ -81,6 +86,23 @@ namespace cSharp_basic_homework_1
             CacheArray[1] = Number.Hypotenuse(10,12);
             CacheArray[2] = Number.Hypotenuse(100,250);
             return CacheArray;
+        }
+        /*
+        Problem 5.Numeral System Conversions
+        Convert 1234 to binary and hexadecimal numeral systems.
+        Convert 0b1100101 to decimal and hexadecimal numeral systems.
+        Convert 0xABC to decimal and binary numeral systems.
+         */
+        static String[] ProblemFive()
+        {
+            String[] CacheString = new String[6];
+            CacheString[0] = "1234 -> " + Convert.ToString(1234, 2) + " (10 -> 2)";
+            CacheString[1] = "1234 -> " + Convert.ToString(1234, 16) + " (10 -> 16)";
+            CacheString[2] = "0b1100101 -> " + Convert.ToString(0b1100101, 10) + " (2 -> 10)";
+            CacheString[3] = "0b1100101 -> " + Convert.ToString(0b1100101, 16) + " (2 -> 16)";
+            CacheString[4] = "0xABC -> " + Convert.ToString(0xABC, 2) + " (16 -> 2)";
+            CacheString[5] = "0xABC -> " + Convert.ToString(0xABC, 10) + " (16 -> 10)";
+            return CacheString;
         }
     }
     class Number 
