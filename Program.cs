@@ -12,22 +12,24 @@ namespace cSharp_basic_homework_1
             String [] ResultOfProblemThree = ProblemThree();
             double [] ResultOfProblemFour = ProblemFour();
             String [] ResultOfProblemFive = ProblemFive();
+            String ResultOfProblemSix = ProblemSix();
             Console.WriteLine("Problem one : ");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(ResultOfProblemOne[i]);
-            Console.WriteLine("Problem two : ");
+            Console.WriteLine("\nProblem two : ");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(ResultOfProblemTwo[i]);
-            Console.WriteLine("Problem  three :");
+            Console.WriteLine("\nProblem  three :");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(ResultOfProblemThree[i]);
-            Console.WriteLine("Problem  four :");
+            Console.WriteLine("\nProblem  four :");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(i+1+".  "+ResultOfProblemFour[i]);
-            Console.WriteLine("Problem  five :");
+            Console.WriteLine("\nProblem  five :");
             for(int i = 0; i < 6; i++)
                 Console.WriteLine(ResultOfProblemFive[i]);
-
+            Console.WriteLine("\nProblem  six :");
+            Console.WriteLine(ResultOfProblemSix);
         }
         /*
         Problem 1.Some Primes
@@ -104,6 +106,15 @@ namespace cSharp_basic_homework_1
             CacheString[5] = "0xABC -> " + Convert.ToString(0xABC, 10) + " (16 -> 10)";
             return CacheString;
         }
+        /*
+        Problem 6.Least Common Multiple
+        Find LCM(1234, 3456).
+         */
+        static String ProblemSix()
+        {
+            String CacheString = "LCM(1234, 3456) = "+Number.LCM(1234, 3456);
+            return CacheString;
+        }
     }
     class Number 
     {
@@ -171,6 +182,17 @@ namespace cSharp_basic_homework_1
         public static double Hypotenuse(double a, double b)
         {
             return Math.Sqrt(a*a+b*b);
+        }
+        public static int LCM(int a, int b)
+        {
+            int GCD=Math.Min(a,b);
+            while(GCD>1)
+            {
+                if (a%GCD==0 && b%GCD==0)
+                    break;
+                GCD--;
+            }
+            return a*b/GCD;
         }
     }
 }
