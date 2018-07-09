@@ -7,13 +7,17 @@ namespace cSharp_basic_homework_1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("This program is a homework solution from");
+            Console.WriteLine("https://github.com/Innos/Soft-Uni-Homework.git");
+            Console.WriteLine("------------------------------------------------");
             int [] ResultOfProblemOne = ProblemOne();
             String [] ResultOfProblemTwo = ProblemTwo(ResultOfProblemOne);
             String [] ResultOfProblemThree = ProblemThree();
             double [] ResultOfProblemFour = ProblemFour();
             String [] ResultOfProblemFive = ProblemFive();
             String ResultOfProblemSix = ProblemSix();
-            Console.WriteLine("Problem one : ");
+            Console.WriteLine("\nProblem one : ");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(ResultOfProblemOne[i]);
             Console.WriteLine("\nProblem two : ");
