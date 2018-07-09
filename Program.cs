@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics; // using for BigInteger
 
 namespace cSharp_basic_homework_1
 {
@@ -8,6 +9,7 @@ namespace cSharp_basic_homework_1
         {
             int [] ResultOfProblemOne = ProblemOne();
             int [] ResultOfProblemTwo = ProblemTwo(ResultOfProblemOne);
+            BigInteger [] ResultOfProblemThree = ProblemThree(100,171,250);
             Console.WriteLine("Problem One : ");
             for(int i = 0; i < 3; i++)
                 Console.WriteLine(ResultOfProblemOne[i]);
@@ -21,6 +23,10 @@ namespace cSharp_basic_homework_1
                     CacheString =  $"This prime number is not Fibonacci number";
                 Console.WriteLine(CacheString);
             }
+            Console.WriteLine("Problem  three :");
+            Console.WriteLine("100! = "+ResultOfProblemThree[0]);
+            Console.WriteLine("171! = "+ResultOfProblemThree[1]);
+            Console.WriteLine("250! = "+ResultOfProblemThree[2]);
         }
         /*
         Problem 1.Some Primes
@@ -34,12 +40,26 @@ namespace cSharp_basic_homework_1
             ArrayOfSomePrimeNumbers[2] = Number.PrimeNumber(251);
             return ArrayOfSomePrimeNumbers;
         }
-
+        /*
+        Problem 2.Some Fibonacci Primes
+        Check if the 24th, 101st and 251st prime numbers are part
+        of the base Fibonacci number set. What is their position? 
+        */
         static int[] ProblemTwo(int[] InArray)
         {
-            int [] ArrayOfPrimeFibonacci;
-            ArrayOfPrimeFibonacci = Number.FibonacciPrimes(InArray);
-            return ArrayOfPrimeFibonacci;
+            return Number.FibonacciPrimes(InArray);
+        }
+        /*
+        Problem 3.Some Factorials
+        Find 100!, 171! and 250! Give all digits.
+        */
+        static BigInteger[] ProblemThree(int n1, int n2, int n3)
+        {
+            int[] CacheArray = new int[3];
+            CacheArray[0] = n1;
+            CacheArray[1] = n2;
+            CacheArray[2] = n3;
+            return Number.Factarial(CacheArray);
         }
     }
     class Number 
@@ -90,6 +110,18 @@ namespace cSharp_basic_homework_1
                     PreviousNumber = NextNumber;
                     NextNumber = CacheNumber;
                 }
+            }
+            return Result;
+        }
+
+        public static BigInteger[] Factarial (int[] CacheArray)
+        {
+            BigInteger[] Result = new BigInteger[3];
+            for(int i = 0; i < 3; i++)
+            {
+                Result[i] = 1;
+                while(CacheArray[i] >= 1)
+                    Result[i]*=CacheArray[i]--;
             }
             return Result;
         }
