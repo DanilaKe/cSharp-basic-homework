@@ -16,7 +16,7 @@ class Number
             }
             return true;
         } 
-        public static int PrimeNumber(int Number)
+        internal static int PrimeNumber(int Number)
         {
             int i = 0;
             int ResultNumber = 0;
@@ -28,7 +28,7 @@ class Number
             }
             return ResultNumber;
         }
-        public static int[] FibonacciPrimes(int[] ArrayOfPrimeNumber)
+        internal static int[] FibonacciPrimes(int[] ArrayOfPrimeNumber)
         {
             int[] Result = new int[3];
             for(int i = 0; i < 3; i++)
@@ -55,7 +55,7 @@ class Number
             return Result;
         }
 
-        public static BigInteger[] Factarial (int[] CacheArray)
+        internal static BigInteger[] Factarial (int[] CacheArray)
         {
             BigInteger[] Result = new BigInteger[3];
             for(int i = 0; i < 3; i++)
@@ -66,11 +66,11 @@ class Number
             }
             return Result;
         }
-        public static double Hypotenuse(double a, double b)
+        internal static double Hypotenuse(double a, double b)
         {
             return Math.Sqrt(a*a+b*b);
         }
-        public static int LCM(int a, int b)
+        internal static int LCM(int a, int b)
         {
             int GCD=Math.Min(a,b);
             while(GCD>1)
