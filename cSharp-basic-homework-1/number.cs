@@ -11,7 +11,7 @@ class Number
                 return false;
             for(int i = 2; i*i <= n; i++)
             {
-                if(n%i==0)
+                if(n%i == 0)
                     return false;
             }
             return true;
@@ -30,14 +30,14 @@ class Number
         }
         internal static int[] FibonacciPrimes(int[] ArrayOfPrimeNumber)
         {
-            int[] Result = new int[3];
-            for(int i = 0; i < 3; i++)
+            var Result = new int[3];
+            for(var i = 0; i < Result.Length; i++)
             {
                 Result[i] = 0;
-                int PreviousNumber = 1;
-                int NextNumber = 1;
-                int CacheNumber;
-                int n=3;
+                var PreviousNumber = 1;
+                var NextNumber = 1;
+                var CacheNumber = 0;
+                var n=3;
                 while(true)
                 {
                     CacheNumber = PreviousNumber + NextNumber;
@@ -57,8 +57,8 @@ class Number
 
         internal static BigInteger[] Factarial (int[] CacheArray)
         {
-            BigInteger[] Result = new BigInteger[3];
-            for(int i = 0; i < 3; i++)
+            var Result = new BigInteger[3];
+            for(var i = 0; i < Result.Length; i++)
             {
                 Result[i] = 1;
                 while(CacheArray[i] >= 1)
