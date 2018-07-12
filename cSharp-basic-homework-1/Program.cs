@@ -19,8 +19,6 @@ namespace cSharp_basic_homework_1
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine("This program is a homework solution from");
             Console.WriteLine("https://github.com/Innos/Soft-Uni-Homework.git");
-            Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("What problem to solve?");
             String[] ResultOfProblem;
             try
             {
