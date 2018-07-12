@@ -1,5 +1,5 @@
 using System;
-using System.Numerics; // using for BigInteger
+//using BigInteger; // using for BigInteger
 
 namespace cSharp_basic_homework_1
 {
