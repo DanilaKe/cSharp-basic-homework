@@ -12,7 +12,14 @@ namespace cSharphomework2
 		List<int> result = new List<int>();
 		public SortArray(string instr)
 		{
-			InNumbers = Array.ConvertAll(instr.Split(), int.Parse).ToList();
+			try
+			{
+				InNumbers = Array.ConvertAll(instr.Split(), int.Parse).ToList();
+			}
+			catch (Exception er)
+            {
+                Console.WriteLine("Error : " + er.Message);
+            }
 		}
 		public SortArray()
 		{

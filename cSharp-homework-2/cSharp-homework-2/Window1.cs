@@ -24,7 +24,7 @@ namespace cSharphomework2
     					break;
     				case 2 :
 						Sort = new SortArray(textview6.Buffer.Text);
-    					textview7.Buffer.Text ="           " + Sort.SortArray2();
+    					textview7.Buffer.Text = Sort.SortArray2();
     					break;
     				default:
                         throw new Exception("Unknown problem");

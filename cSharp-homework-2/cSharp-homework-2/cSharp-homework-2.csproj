@@ -67,6 +67,7 @@
     <Compile Include="SortArray.cs" />
     <Compile Include="Window1.cs" />
     <Compile Include="gtk-gui\cSharphomework2.Window1.cs" />
+    <Compile Include="Number.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
