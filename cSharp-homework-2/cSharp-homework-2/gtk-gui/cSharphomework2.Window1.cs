@@ -33,15 +33,15 @@ namespace cSharphomework2
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
-			// Widget cSharphomework1.Window1
+			// Widget cSharphomework2.Window1
 			this.UIManager = new global::Gtk.UIManager();
 			global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup("Default");
 			this.UIManager.InsertActionGroup(w1, 0);
 			this.AddAccelGroup(this.UIManager.AccelGroup);
-			this.Name = "cSharphomework1.Window1";
+			this.Name = "cSharphomework2.Window1";
 			this.Title = global::Mono.Unix.Catalog.GetString("Window1");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
-			// Container child cSharphomework1.Window1.Gtk.Container+ContainerChild
+			// Container child cSharphomework2.Window1.Gtk.Container+ContainerChild
 			this.vpaned1 = new global::Gtk.VPaned();
 			this.vpaned1.CanFocus = true;
 			this.vpaned1.Name = "vpaned1";
@@ -52,9 +52,9 @@ namespace cSharphomework2
 			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
 			this.textview1 = new global::Gtk.TextView();
-			this.textview1.Buffer.Text = "Problem 1.Sort Array of Numbers\r\nWrite a program to sort an array of numbers and " +
-				"then print them back on the console.\nThe numbers should be entered from the cons" +
-				"ole on a single line, separated by a space.";
+			this.textview1.Buffer.Text = "Problem 1.Sort Array of Numbers\nWrite a program to sort an array of numbers and t" +
+				"hen print them back on the console.\nThe numbers should be entered from the conso" +
+				"le on a single line, separated by a space.";
 			this.textview1.CanFocus = true;
 			this.textview1.Name = "textview1";
 			this.textview1.Editable = false;

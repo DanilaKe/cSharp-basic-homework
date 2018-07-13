@@ -36,5 +36,23 @@ namespace cSharphomework2
 			Console.WriteLine(String.Join(" ", result));
 			return String.Join(" ", result);
 		}
+        
+		public String SortArray2()
+		{
+			for (var i = 0; i < InNumbers.Count; i++)
+			{
+				int min = InNumbers[i];
+				for (var j = InNumbers.Count-1; j > i; j--)
+				{
+					if (min > InNumbers[j])
+					{
+						min = InNumbers[j];
+						(InNumbers[i],InNumbers[j]) = (InNumbers[j], InNumbers[i]);
+					}
+				}
+			}
+			Console.WriteLine(String.Join(" ", InNumbers));
+			return String.Join(" ", InNumbers);
+        }
 	}
 }
