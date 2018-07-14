@@ -26,4 +26,10 @@ public partial class MainWindow : Gtk.Window
 		Window1 win = new Window1(2);
 		win.Show();
 	}
+
+	protected void OnButton8Pressed(object sender, EventArgs e)
+	{
+		Window1 win = new Window1(3);
+        win.Show();
+	}
 }

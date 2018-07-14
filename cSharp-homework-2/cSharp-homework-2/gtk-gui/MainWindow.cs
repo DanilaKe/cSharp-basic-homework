@@ -17,6 +17,20 @@ public partial class MainWindow
 
 	private global::Gtk.Button button2;
 
+	private global::Gtk.Button button3;
+
+	private global::Gtk.Button button4;
+
+	private global::Gtk.Button button5;
+
+	private global::Gtk.Button button6;
+
+	private global::Gtk.Button button7;
+
+	private global::Gtk.Button button8;
+
+	private global::Gtk.Button button9;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
@@ -26,7 +40,6 @@ public partial class MainWindow
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.table1 = new global::Gtk.Table(((uint)(2)), ((uint)(1)), false);
-		this.table1.Name = "table1";
 		this.table1.RowSpacing = ((uint)(6));
 		this.table1.ColumnSpacing = ((uint)(6));
 		// Container child table1.Gtk.Table+TableChild
@@ -50,8 +63,10 @@ public partial class MainWindow
 		w2.TopAttach = ((uint)(1));
 		w2.BottomAttach = ((uint)(2));
 		this.table1.Add(this.table2);
+		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1[this.table2]));
+		w3.XOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
-		this.table4 = new global::Gtk.Table(((uint)(4)), ((uint)(4)), false);
+		this.table4 = new global::Gtk.Table(((uint)(3)), ((uint)(3)), false);
 		this.table4.Name = "table4";
 		this.table4.RowSpacing = ((uint)(6));
 		this.table4.ColumnSpacing = ((uint)(6));
@@ -60,34 +75,136 @@ public partial class MainWindow
 		this.button1.CanFocus = true;
 		this.button1.Name = "button1";
 		this.button1.UseUnderline = true;
+		this.button1.BorderWidth = ((uint)(30));
 		this.button1.Label = global::Mono.Unix.Catalog.GetString("Problem 1");
 		this.table4.Add(this.button1);
-		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table4[this.button1]));
-		w4.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table4.Gtk.Table+TableChild
 		this.button2 = new global::Gtk.Button();
 		this.button2.CanFocus = true;
 		this.button2.Name = "button2";
 		this.button2.UseUnderline = true;
+		this.button2.BorderWidth = ((uint)(30));
 		this.button2.Label = global::Mono.Unix.Catalog.GetString("Problem 2");
 		this.table4.Add(this.button2);
 		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table4[this.button2]));
 		w5.LeftAttach = ((uint)(1));
 		w5.RightAttach = ((uint)(2));
 		w5.YOptions = ((global::Gtk.AttachOptions)(4));
-		this.table1.Add(this.table4);
-		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table1[this.table4]));
+		// Container child table4.Gtk.Table+TableChild
+		this.button3 = new global::Gtk.Button();
+		this.button3.CanFocus = true;
+		this.button3.Name = "button3";
+		this.button3.UseUnderline = true;
+		this.button3.BorderWidth = ((uint)(27));
+		this.button3.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.table4.Add(this.button3);
+		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table4[this.button3]));
 		w6.TopAttach = ((uint)(1));
 		w6.BottomAttach = ((uint)(2));
+		w6.XOptions = ((global::Gtk.AttachOptions)(4));
+		w6.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table4.Gtk.Table+TableChild
+		this.button4 = new global::Gtk.Button();
+		this.button4.CanFocus = true;
+		this.button4.Name = "button4";
+		this.button4.UseUnderline = true;
+		this.button4.BorderWidth = ((uint)(27));
+		this.button4.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.table4.Add(this.button4);
+		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table4[this.button4]));
+		w7.TopAttach = ((uint)(2));
+		w7.BottomAttach = ((uint)(3));
+		w7.LeftAttach = ((uint)(1));
+		w7.RightAttach = ((uint)(2));
+		w7.XOptions = ((global::Gtk.AttachOptions)(4));
+		w7.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table4.Gtk.Table+TableChild
+		this.button5 = new global::Gtk.Button();
+		this.button5.CanFocus = true;
+		this.button5.Name = "button5";
+		this.button5.UseUnderline = true;
+		this.button5.BorderWidth = ((uint)(27));
+		this.button5.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.table4.Add(this.button5);
+		global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table4[this.button5]));
+		w8.TopAttach = ((uint)(1));
+		w8.BottomAttach = ((uint)(2));
+		w8.LeftAttach = ((uint)(1));
+		w8.RightAttach = ((uint)(2));
+		w8.XOptions = ((global::Gtk.AttachOptions)(4));
+		w8.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table4.Gtk.Table+TableChild
+		this.button6 = new global::Gtk.Button();
+		this.button6.CanFocus = true;
+		this.button6.Name = "button6";
+		this.button6.UseUnderline = true;
+		this.button6.BorderWidth = ((uint)(27));
+		this.button6.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.table4.Add(this.button6);
+		global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table4[this.button6]));
+		w9.TopAttach = ((uint)(2));
+		w9.BottomAttach = ((uint)(3));
+		w9.XOptions = ((global::Gtk.AttachOptions)(4));
+		w9.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table4.Gtk.Table+TableChild
+		this.button7 = new global::Gtk.Button();
+		this.button7.CanFocus = true;
+		this.button7.Name = "button7";
+		this.button7.UseUnderline = true;
+		this.button7.BorderWidth = ((uint)(27));
+		this.button7.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.table4.Add(this.button7);
+		global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.table4[this.button7]));
+		w10.TopAttach = ((uint)(1));
+		w10.BottomAttach = ((uint)(2));
+		w10.LeftAttach = ((uint)(2));
+		w10.RightAttach = ((uint)(3));
+		w10.XOptions = ((global::Gtk.AttachOptions)(4));
+		w10.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table4.Gtk.Table+TableChild
+		this.button8 = new global::Gtk.Button();
+		this.button8.CanFocus = true;
+		this.button8.Name = "button8";
+		this.button8.UseUnderline = true;
+		this.button8.BorderWidth = ((uint)(30));
+		this.button8.Label = global::Mono.Unix.Catalog.GetString("Problem 3");
+		this.table4.Add(this.button8);
+		global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.table4[this.button8]));
+		w11.LeftAttach = ((uint)(2));
+		w11.RightAttach = ((uint)(3));
+		w11.XOptions = ((global::Gtk.AttachOptions)(4));
+		w11.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table4.Gtk.Table+TableChild
+		this.button9 = new global::Gtk.Button();
+		this.button9.CanFocus = true;
+		this.button9.Name = "button9";
+		this.button9.UseUnderline = true;
+		this.button9.BorderWidth = ((uint)(27));
+		this.button9.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.table4.Add(this.button9);
+		global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.table4[this.button9]));
+		w12.TopAttach = ((uint)(2));
+		w12.BottomAttach = ((uint)(3));
+		w12.LeftAttach = ((uint)(2));
+		w12.RightAttach = ((uint)(3));
+		w12.XOptions = ((global::Gtk.AttachOptions)(4));
+		w12.YOptions = ((global::Gtk.AttachOptions)(4));
+		this.table1.Add(this.table4);
+		global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.table1[this.table4]));
+		w13.TopAttach = ((uint)(1));
+		w13.BottomAttach = ((uint)(2));
+		w13.XOptions = ((global::Gtk.AttachOptions)(4));
+		w13.YOptions = ((global::Gtk.AttachOptions)(4));
 		this.Add(this.table1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 400;
-		this.DefaultHeight = 300;
+		this.DefaultWidth = 396;
+		this.DefaultHeight = 479;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.button8.Pressed += new global::System.EventHandler(this.OnButton8Pressed);
 		this.button2.Clicked += new global::System.EventHandler(this.OnButton2Clicked);
 		this.button1.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
 	}

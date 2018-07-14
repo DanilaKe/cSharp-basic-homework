@@ -6,12 +6,12 @@ namespace cSharphomework2
 {
 	public class Number
 	{
-		List<float> InNumbers;
+		List<double> InNumbers;
 		public Number(string instr)
 		{
 			try
 			{
-				InNumbers = Array.ConvertAll(instr.Split(), float.Parse).ToList();
+				InNumbers = Array.ConvertAll(instr.Split(), Double.Parse).ToList();
 			}
 			catch (Exception er)
 			{
@@ -19,22 +19,37 @@ namespace cSharphomework2
 			}
 		}
 
-		public (List<float>, List<int>) Categorize()
+		public string Categorize()
 		{
-			List<float> CacheNumbers = InNumbers;
 			List<float> FloatResult = new List<float>();
 			List<int> IntegerResult = new List<int>();
 			float eps = 0.000001f;
-			for (var i = 0; i < CacheNumbers.Count; i++)
+			for (var i = 0; i < InNumbers.Count; i++)
 			{
-				if (CacheNumbers[i] - (Int32)CacheNumbers[i] > eps)
-					FloatResult.Add(CacheNumbers[i]);
+				if (InNumbers[i] - (Int32)InNumbers[i] > eps)
+					FloatResult.Add((float)InNumbers[i]);
 				else
-					IntegerResult.Add((Int32)CacheNumbers[i]);
+					IntegerResult.Add((Int32)InNumbers[i]);
 			}
 			Console.WriteLine(String.Join(" ", FloatResult));
 			Console.WriteLine(String.Join(" ", IntegerResult));
-			return (FloatResult,IntegerResult);
+			string ResultString = "";
+			if (FloatResult.Count != 0)
+			{
+				ResultString = $"[{String.Join(" ", FloatResult)} ]\n";
+				ResultString += $"Min = {FloatResult.Min<float>()}\n";
+				ResultString += $"Max = {FloatResult.Max()}\n";
+				ResultString += $"Average = {FloatResult.Average()}\n";
+			}
+			if (IntegerResult.Count != 0)
+			{
+				ResultString += "------------------------------------------------\n";
+				ResultString += $"[{String.Join(" ", IntegerResult)} ]\n";
+				ResultString += $"Min = {IntegerResult.Min()}\n";
+				ResultString += $"Max = {IntegerResult.Max()}\n";
+				ResultString += $"Average = {IntegerResult.Average()}\n";
+			}
+			return ResultString;
 		}
     }
 }
