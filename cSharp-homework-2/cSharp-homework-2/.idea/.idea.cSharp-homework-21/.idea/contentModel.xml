@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_cSharp-homework-21.-208568486.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="MainWindow.cs" t="Include" />
+      <e p="Number.cs" t="Include" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="SortArray.cs" t="Include" />
+      <e p="Window1.cs" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="cSharp-homework-2.csproj" t="IncludeRecursive" />
+      <e p="cSharp-homework-21.sln" t="IncludeFlat" />
+      <e p="gtk-gui" t="Include">
+        <e p="MainWindow.cs" t="Include" />
+        <e p="cSharphomework2.Window1.cs" t="Include" />
+        <e p="generated.cs" t="Include" />
+        <e p="gui.stetic" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -8,7 +8,7 @@ namespace cSharphomework2
         public static void Main(string[] args)
         {
             Application.Init();
-			MainWindow  win = new MainWindow();
+			var win = new MainWindow();
             win.Show();
             Application.Run();
         }

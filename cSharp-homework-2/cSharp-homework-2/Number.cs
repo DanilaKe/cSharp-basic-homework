@@ -6,12 +6,12 @@ namespace cSharphomework2
 {
 	public class Number
 	{
-		List<double> InNumbers;
+		List<double> _inNumbers;
 		public Number(string instr)
 		{
 			try
 			{
-				InNumbers = Array.ConvertAll(instr.Split(), Double.Parse).ToList();
+				_inNumbers = Array.ConvertAll(instr.Split(), double.Parse).ToList();
 			}
 			catch (Exception er)
 			{
@@ -21,33 +21,33 @@ namespace cSharphomework2
 
 		public string Categorize()
 		{
-			List<float> FloatResult = new List<float>();
-			List<int> IntegerResult = new List<int>();
-			float eps = 0.000001f;
-			for (var i = 0; i < InNumbers.Count; i++)
+			var floatResult = new List<float>();
+			var integerResult = new List<int>();
+			const float eps = 0.000001f;
+			foreach (var i in _inNumbers)
 			{
-				if (InNumbers[i] - (Int32)InNumbers[i] > eps)
-					FloatResult.Add((float)InNumbers[i]);
+				if (i - (int)i > eps)
+					floatResult.Add((float)i);
 				else
-					IntegerResult.Add((Int32)InNumbers[i]);
+					integerResult.Add((int)i);
 			}
-			Console.WriteLine(String.Join(" ", FloatResult));
-			Console.WriteLine(String.Join(" ", IntegerResult));
-			string ResultString = "";
-			if (FloatResult.Count != 0)
+			Console.WriteLine(string.Join(" ", floatResult));
+			Console.WriteLine(string.Join(" ", integerResult));
+			var ResultString = "";
+			if (floatResult.Count != 0)
 			{
-				ResultString = $"[{String.Join(" ", FloatResult)} ]\n";
-				ResultString += $"Min = {FloatResult.Min<float>()}\n";
-				ResultString += $"Max = {FloatResult.Max()}\n";
-				ResultString += $"Average = {FloatResult.Average()}\n";
+				ResultString = $"[{string.Join(" ", floatResult)} ]\n";
+				ResultString += $"Min = {floatResult.Min<float>()}\n";
+				ResultString += $"Max = {floatResult.Max()}\n";
+				ResultString += $"Average = {floatResult.Average()}\n";
 			}
-			if (IntegerResult.Count != 0)
+			if (integerResult.Count != 0)
 			{
 				ResultString += "------------------------------------------------\n";
-				ResultString += $"[{String.Join(" ", IntegerResult)} ]\n";
-				ResultString += $"Min = {IntegerResult.Min()}\n";
-				ResultString += $"Max = {IntegerResult.Max()}\n";
-				ResultString += $"Average = {IntegerResult.Average()}\n";
+				ResultString += $"[{string.Join(" ", integerResult)} ]\n";
+				ResultString += $"Min = {integerResult.Min()}\n";
+				ResultString += $"Max = {integerResult.Max()}\n";
+				ResultString += $"Average = {integerResult.Average()}\n";
 			}
 			return ResultString;
 		}

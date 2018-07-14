@@ -8,8 +8,7 @@ namespace cSharphomework2
 {
 	public class SortArray
 	{
-		public List<int> InNumbers;
-		List<int> result = new List<int>();
+		private List<int> InNumbers;
 		public SortArray(string instr)
 		{
 			try
@@ -17,21 +16,21 @@ namespace cSharphomework2
 				InNumbers = Array.ConvertAll(instr.Split(), int.Parse).ToList();
 			}
 			catch (Exception er)
-            {
-                Console.WriteLine("Error : " + er.Message);
+			{
+                Console.WriteLine($"Error : {er.Message}");
             }
 		}
 		public SortArray()
 		{
 		}
-		public String SortArray1()
+		public string SortArray1()
 		{
-
+			var result = new List<int>();
 			while (InNumbers.Count > 0)
 			{
-				int min = InNumbers[0];
-				for (int i = 0; i < InNumbers.Count; i++)
-				{
+				var min = InNumbers[0];
+				foreach (var i in InNumbers)
+				{	
 					if (InNumbers[i] < min)
 					{
 						min = InNumbers[i];
@@ -40,26 +39,27 @@ namespace cSharphomework2
 				result.Add(min);
 				InNumbers.Remove(min);
 			}
-			Console.WriteLine(String.Join(" ", result));
-			return String.Join(" ", result);
+			Console.WriteLine(string.Join(" ", result));
+			return string.Join(" ", result);
 		}
         
-		public String SortArray2()
+		public string SortArray2()
 		{
+			var result = new List<int>();
 			for (var i = 0; i < InNumbers.Count; i++)
 			{
-				int min = InNumbers[i];
+				var min = InNumbers[i];
 				for (var j = InNumbers.Count-1; j > i; j--)
 				{
-					if (min > InNumbers[j])
+					if(min > InNumbers[j])
 					{
 						min = InNumbers[j];
 						(InNumbers[i],InNumbers[j]) = (InNumbers[j], InNumbers[i]);
 					}
 				}
 			}
-			Console.WriteLine(String.Join(" ", InNumbers));
-			return String.Join(" ", InNumbers);
+			Console.WriteLine(string.Join(" ", InNumbers));
+			return string.Join(" ", InNumbers);
         }
 	}
 }

@@ -9,27 +9,26 @@ public partial class MainWindow : Gtk.Window
 		Build();
 	}
 
-	protected void OnDeleteEvent(object sender, DeleteEventArgs a)
+	private void OnDeleteEvent(object sender, DeleteEventArgs a)
 	{
 		Application.Quit();
-		a.RetVal = true;
 	}
 
-	protected void OnButton1Clicked(object sender, EventArgs e)
+	private void OnButton1Clicked(object sender, EventArgs e)
 	{
-		Window1 win = new Window1(1);
+		var win = new Window1(1);
 		win.Show();
 	}
     
-	protected void OnButton2Clicked(object sender, EventArgs e)
+	private void OnButton2Clicked(object sender, EventArgs e)
 	{
-		Window1 win = new Window1(2);
+		var win = new Window1(2);
 		win.Show();
 	}
 
-	protected void OnButton8Pressed(object sender, EventArgs e)
+	private void OnButton8Pressed(object sender, EventArgs e)
 	{
-		Window1 win = new Window1(3);
+		var win = new Window1(3);
         win.Show();
 	}
 }
