@@ -9,20 +9,25 @@ namespace cSharphomework2
         {
 			this.number = n;
             this.Build();
+	        var textview = new TextProblems();
 			switch (number)
             {
                 case 1:
+	                textview.EditNumberProblem(1);
                     button3.Label = "Sort";
                     break;
                 case 2:
+	                textview.EditNumberProblem(2);
                     button3.Label = "Sort";
                     break;
                 case 3:
+	                textview.EditNumberProblem(3);
                     button3.Label = "Categorize";
                     break;
                 default:
                     throw new Exception("Unknown problem");
             }
+	        textview1.Buffer.Text = textview.makeProblemText();
         }
 
 		protected void OnButton3Pressed(object sender, EventArgs e)
