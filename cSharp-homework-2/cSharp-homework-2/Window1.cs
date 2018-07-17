@@ -24,6 +24,10 @@ namespace cSharphomework2
 	                textview.EditNumberProblem(3);
                     button3.Label = "Categorize";
                     break;
+	            case 4:
+		            textview.EditNumberProblem(4);
+		            button3.Label = "Categorize";
+		            break;
                 default:
                     throw new Exception("Unknown problem");
             }
@@ -36,6 +40,7 @@ namespace cSharphomework2
 			{
 				SortArray Sort;
 				Number numbers;
+				ArrayOfStrings EqualStrings;
     			switch (number)
 				{
     				case 1 :
@@ -50,6 +55,10 @@ namespace cSharphomework2
 						numbers = new Number(textview6.Buffer.Text);
 						textview7.Buffer.Text = numbers.Categorize();
                         break;
+					case 4 :
+						EqualStrings = new ArrayOfStrings(textview6.Buffer.Text);
+						textview7.Buffer.Text = EqualStrings.SequencesofEqualStrings();
+						break;
     				default:
                         throw new Exception("Unknown problem");
                 }

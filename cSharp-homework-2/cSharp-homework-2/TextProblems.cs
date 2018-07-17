@@ -51,6 +51,11 @@ namespace cSharphomework2
                         text = $"{text} Print both arrays along with their minimum, maximum, sum and average (rounded to two decimal places). \n";
                         break;
                     case 4 :
+                        text = $"Problem №{_numberProblem} .";
+                        text = $"{text} Equences of Equal Strings \n";
+                        text = $"{text} Write a program that reads an array of strings and finds in it all sequences of equal elements \n";
+                        text = $"{text} (comparison should be case-insensitive). \n";
+                        text = $"{text} The input strings are given as a single line, separated by a space. \n";
                         break;
                     case 5 :
                         break;
@@ -65,7 +70,6 @@ namespace cSharphomework2
                     default:
                         throw new Exception("Unknown problem");
                 }
-
                 return text;
             }
             catch (Exception e)

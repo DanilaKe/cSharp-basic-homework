@@ -31,4 +31,10 @@ public partial class MainWindow : Gtk.Window
 		var win = new Window1(3);
         win.Show();
 	}
+	
+	private void OnButton3Pressed(object sender, EventArgs e)
+	{
+		var win = new Window1(4);
+		win.Show();
+	}
 }
