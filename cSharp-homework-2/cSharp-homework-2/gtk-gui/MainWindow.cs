@@ -109,7 +109,7 @@ public partial class MainWindow
 		this.button4.Name = "button4";
 		this.button4.UseUnderline = true;
 		this.button4.BorderWidth = ((uint)(27));
-		this.button4.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.button4.Label = global::Mono.Unix.Catalog.GetString("Problem 8");
 		this.table4.Add(this.button4);
 		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table4[this.button4]));
 		w7.TopAttach = ((uint)(2));
@@ -124,7 +124,7 @@ public partial class MainWindow
 		this.button5.Name = "button5";
 		this.button5.UseUnderline = true;
 		this.button5.BorderWidth = ((uint)(27));
-		this.button5.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.button5.Label = global::Mono.Unix.Catalog.GetString("Problem 5");
 		this.table4.Add(this.button5);
 		global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table4[this.button5]));
 		w8.TopAttach = ((uint)(1));
@@ -208,7 +208,7 @@ public partial class MainWindow
 		this.button8.Pressed += new global::System.EventHandler(this.OnButton8Pressed);
 		this.button7.Pressed += new global::System.EventHandler(this.OnButton8Pressed);
 		this.button6.Pressed += new global::System.EventHandler(this.OnButton8Pressed);
-		this.button5.Pressed += new global::System.EventHandler(this.OnButton8Pressed);		
+		this.button5.Pressed += new global::System.EventHandler(this.OnButton5Pressed);		
 		this.button4.Pressed += new global::System.EventHandler(this.OnButton8Pressed);		
 		this.button3.Pressed += new global::System.EventHandler(this.OnButton3Pressed);							
 		this.button2.Clicked += new global::System.EventHandler(this.OnButton2Clicked);

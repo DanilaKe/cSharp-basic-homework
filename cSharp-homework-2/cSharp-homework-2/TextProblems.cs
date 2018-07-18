@@ -58,6 +58,13 @@ namespace cSharphomework2
                         text = $"{text} The input strings are given as a single line, separated by a space. \n";
                         break;
                     case 5 :
+                        text = $"Problem №{_numberProblem} .";
+                        text = $"{text} Longest Increasing Sequence \n";
+                        text = $"{text} Write a program to find all increasing sequences inside an array of integers. The integers are \n";
+                        text = $"{text} given on a single line, separated by a space. Print the sequences in the order of their appearance in \n";
+                        text = $"{text} the input array, each at a single line. Separate the sequence elements by a space. Find also the longest \n";
+                        text = $"{text} increasing sequence and print it at the last line. If several sequences have the same longest length, \n";
+                        text = $"{text} print the left-most of them. \n";
                         break;
                     case 6 :
                         break;

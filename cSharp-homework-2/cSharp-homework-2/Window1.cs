@@ -26,7 +26,11 @@ namespace cSharphomework2
                     break;
 	            case 4:
 		            textview.EditNumberProblem(4);
-		            button3.Label = "Categorize";
+		            button3.Label = "Find";
+		            break;
+	            case 5:
+		            textview.EditNumberProblem(5);
+		            button3.Label = "Find";
 		            break;
                 default:
                     throw new Exception("Unknown problem");
@@ -58,6 +62,10 @@ namespace cSharphomework2
 					case 4 :
 						EqualStrings = new ArrayOfStrings(textview6.Buffer.Text);
 						textview7.Buffer.Text = EqualStrings.SequencesofEqualStrings();
+						break;
+					case 5 :
+						EqualStrings = new ArrayOfStrings(textview6.Buffer.Text);
+						textview7.Buffer.Text = EqualStrings.LongestIncreasingSequence();
 						break;
     				default:
                         throw new Exception("Unknown problem");
