@@ -8,7 +8,6 @@ namespace cSharphomework2
     public class ArrayOfStrings
     {
         private List<string> memoryOfStrings;
-        private List<int> memoryOfInteger;
         private string bufferString;
         public ArrayOfStrings(string inString)
         {
@@ -41,44 +40,17 @@ namespace cSharphomework2
         public string LongestIncreasingSequence()
         {
             var resultString = "";
-            try
+            var counter = 0;
+            List<int> nums = Array.ConvertAll(bufferString.Split(), int.Parse).ToList();
+            List<List<int>> result = new List<List<int>>();
+            while (nums.Count > 0)
             {
-                memoryOfInteger = Array.ConvertAll(bufferString.Split(), int.Parse).ToList();
+                result.Add(new List<int>(nums.TakeWhile((x, i) => i == 0 || x > nums[i - 1]).ToList()));
+                nums.RemoveRange(0, result[counter].Count);
+                counter++;
             }
-            catch (Exception er)
-            {
-                Console.WriteLine($"Error : {er.Message}");
-            }
-
-            var longestString = "";
-            resultString = memoryOfInteger[0].ToString();
-            var bufferLongestString = memoryOfInteger[0].ToString();
-            int n = 0;
-            int lastn = 0;
-            for (var i = 1; i < memoryOfInteger.Count; i++)
-            {
-                if (memoryOfInteger[i] > memoryOfInteger[i - 1])
-                {
-                    resultString = $"{resultString} {memoryOfInteger[i]}";
-                    bufferLongestString = $"{bufferLongestString} {memoryOfInteger[i]}";
-                    n++;
-                    if((i+1 == memoryOfInteger.Count)  && (n > lastn))
-                        longestString = bufferLongestString;
-                }
-                else
-                {
-                    resultString = $"{resultString} \n{memoryOfInteger[i]}";
-                    if (n > lastn)
-                    {
-                        lastn = n;
-                        n = 0;
-                        longestString = bufferLongestString;
-                    }
-
-                    bufferLongestString = memoryOfInteger[i].ToString();
-                }
-            }
-            resultString = $"{resultString} \nLongest: {longestString}";
+            result.ForEach(x => resultString = $"{resultString} \n{String.Join(" ", x)}");
+            resultString = $"{resultString} \nLongest: {String.Join(" ", result.OrderByDescending(x => x.Count()).First())}";
             return resultString;
         }
     }
