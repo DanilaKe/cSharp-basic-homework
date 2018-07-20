@@ -7,6 +7,7 @@ public partial class MainWindow : Gtk.Window
 	public MainWindow() : base(Gtk.WindowType.Toplevel)
 	{
 		Build();
+		this.Title = "cSharp-homework-2";
 	}
 
 	private void OnDeleteEvent(object sender, DeleteEventArgs a)

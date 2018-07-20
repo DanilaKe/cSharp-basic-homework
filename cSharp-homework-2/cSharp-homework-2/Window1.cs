@@ -15,26 +15,32 @@ namespace cSharphomework2
                 case 1:
 	                textview.EditNumberProblem(1);
                     button3.Label = "Sort";
+	                this.Title = "Problem 1. Sort Array of Numbers";
                     break;
                 case 2:
 	                textview.EditNumberProblem(2);
                     button3.Label = "Sort";
+	                this.Title = "Problem 2. Sort Array of Numbers Using Selection Sort";
                     break;
                 case 3:
 	                textview.EditNumberProblem(3);
                     button3.Label = "Categorize";
+	                this.Title = "Problem 3. Categorize Numbers";
                     break;
 	            case 4:
 		            textview.EditNumberProblem(4);
 		            button3.Label = "Find";
+		            this.Title = "Problem 4. Equences of Equal Strings";
 		            break;
 	            case 5:
 		            textview.EditNumberProblem(5);
 		            button3.Label = "Find";
+		            this.Title = "Problem 5. Longest Increasing Sequence";
 		            break;
 	            case 6:
 		            textview.EditNumberProblem(6);
 		            button3.Label = "Subset sum";
+		            this.Title = "Problem 6. Subset sum";
 		            break;
                 default:
                     throw new Exception("Unknown problem");
