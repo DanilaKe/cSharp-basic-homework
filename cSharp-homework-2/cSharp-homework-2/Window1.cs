@@ -32,6 +32,10 @@ namespace cSharphomework2
 		            textview.EditNumberProblem(5);
 		            button3.Label = "Find";
 		            break;
+	            case 6:
+		            textview.EditNumberProblem(6);
+		            button3.Label = "Subset sum";
+		            break;
                 default:
                     throw new Exception("Unknown problem");
             }
@@ -66,6 +70,10 @@ namespace cSharphomework2
 					case 5 :
 						EqualStrings = new ArrayOfStrings(textview6.Buffer.Text);
 						textview7.Buffer.Text = EqualStrings.LongestIncreasingSequence();
+						break;
+					case 6 :
+						EqualStrings = new ArrayOfStrings(textview6.Buffer.Text);
+						textview7.Buffer.Text = EqualStrings.SubsetSums();
 						break;
     				default:
                         throw new Exception("Unknown problem");

@@ -20,6 +20,7 @@ namespace cSharphomework2
             try
             {
                 memoryOfStrings = bufferString.Split().ToList();
+                Console.WriteLine(string.Join(" ", memoryOfStrings));
             }
             catch (Exception er)
             {
@@ -51,6 +52,36 @@ namespace cSharphomework2
             }
             result.ForEach(x => resultString = $"{resultString} \n{String.Join(" ", x)}");
             resultString = $"{resultString} \nLongest: {String.Join(" ", result.OrderByDescending(x => x.Count()).First())}";
+            return resultString;
+        }
+
+        public string SubsetSums()
+        {
+            bool solutionFound = false;
+            int[] numbers = bufferString.Split().Select(int.Parse).Distinct().ToArray();
+            int targetSum = numbers[0];
+            int y = numbers.Length;
+            int n = 1 << numbers.Length;
+            var resultString = "";
+            var subsets = from m in Enumerable.Range(0, 1 << numbers.Length)
+                select
+                    from i in Enumerable.Range(0, numbers.Length)
+                    where (m & (1 << i)) != 0
+                    select numbers[i];
+            foreach (var item in subsets)
+            {
+                if (item.Sum() == targetSum)
+                {
+                    resultString = $"{resultString} \n{String.Join(" + ", item)} = {targetSum}";
+                    solutionFound = true;
+                }
+
+            }
+            if (solutionFound == false)
+            {
+                resultString = "No matching subsets.";
+            }
+
             return resultString;
         }
     }

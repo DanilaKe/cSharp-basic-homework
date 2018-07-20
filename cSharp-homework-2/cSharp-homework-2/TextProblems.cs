@@ -67,6 +67,12 @@ namespace cSharphomework2
                         text = $"{text} print the left-most of them. \n";
                         break;
                     case 6 :
+                        text = $"Problem №{_numberProblem} .";
+                        text = $"{text} Subset sums \n";
+                        text = $"{text} Write a program that reads from the console a number N and an array of integers given on a single line. \n";
+                        text = $"{text} Your task is to find all subsets within the array which have a sum equal to N and print them on \n";
+                        text = $"{text} the console (the order of printing is not important). Find only the unique subsets by filtering out \n";
+                        text = $"{text} repeating numbers first. In case there aren't any subsets with the desired sum, print \"No matching subsets.\"";
                         break;
                     case 7 :
                         break;
