@@ -75,7 +75,7 @@ public partial class MainWindow
 		this.button1.CanFocus = true;
 		this.button1.Name = "button1";
 		this.button1.UseUnderline = true;
-		this.button1.BorderWidth = ((uint)(30));
+		this.button1.BorderWidth = ((uint)(15));
 		this.button1.Label = global::Mono.Unix.Catalog.GetString("Problem 1");
 		this.table4.Add(this.button1);
 		// Container child table4.Gtk.Table+TableChild
@@ -83,7 +83,7 @@ public partial class MainWindow
 		this.button2.CanFocus = true;
 		this.button2.Name = "button2";
 		this.button2.UseUnderline = true;
-		this.button2.BorderWidth = ((uint)(30));
+		this.button2.BorderWidth = ((uint)(15));
 		this.button2.Label = global::Mono.Unix.Catalog.GetString("Problem 2");
 		this.table4.Add(this.button2);
 		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table4[this.button2]));
@@ -95,7 +95,7 @@ public partial class MainWindow
 		this.button3.CanFocus = true;
 		this.button3.Name = "button3";
 		this.button3.UseUnderline = true;
-		this.button3.BorderWidth = ((uint)(27));
+		this.button3.BorderWidth = ((uint)(15));
 		this.button3.Label = global::Mono.Unix.Catalog.GetString("Problem 4");
 		this.table4.Add(this.button3);
 		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table4[this.button3]));
@@ -108,7 +108,7 @@ public partial class MainWindow
 		this.button4.CanFocus = true;
 		this.button4.Name = "button4";
 		this.button4.UseUnderline = true;
-		this.button4.BorderWidth = ((uint)(27));
+		this.button4.BorderWidth = ((uint)(15));
 		this.button4.Label = global::Mono.Unix.Catalog.GetString("Problem 8");
 		this.table4.Add(this.button4);
 		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table4[this.button4]));
@@ -123,7 +123,7 @@ public partial class MainWindow
 		this.button5.CanFocus = true;
 		this.button5.Name = "button5";
 		this.button5.UseUnderline = true;
-		this.button5.BorderWidth = ((uint)(27));
+		this.button5.BorderWidth = ((uint)(15));
 		this.button5.Label = global::Mono.Unix.Catalog.GetString("Problem 5");
 		this.table4.Add(this.button5);
 		global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table4[this.button5]));
@@ -138,7 +138,7 @@ public partial class MainWindow
 		this.button6.CanFocus = true;
 		this.button6.Name = "button6";
 		this.button6.UseUnderline = true;
-		this.button6.BorderWidth = ((uint)(27));
+		this.button6.BorderWidth = ((uint)(15));
 		this.button6.Label = global::Mono.Unix.Catalog.GetString("Problem 7");
 		this.table4.Add(this.button6);
 		global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table4[this.button6]));
@@ -151,7 +151,7 @@ public partial class MainWindow
 		this.button7.CanFocus = true;
 		this.button7.Name = "button7";
 		this.button7.UseUnderline = true;
-		this.button7.BorderWidth = ((uint)(27));
+		this.button7.BorderWidth = ((uint)(15));
 		this.button7.Label = global::Mono.Unix.Catalog.GetString("Problem 6");
 		this.table4.Add(this.button7);
 		global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.table4[this.button7]));
@@ -166,7 +166,7 @@ public partial class MainWindow
 		this.button8.CanFocus = true;
 		this.button8.Name = "button8";
 		this.button8.UseUnderline = true;
-		this.button8.BorderWidth = ((uint)(30));
+		this.button8.BorderWidth = ((uint)(15));
 		this.button8.Label = global::Mono.Unix.Catalog.GetString("Problem 3");
 		this.table4.Add(this.button8);
 		global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.table4[this.button8]));
@@ -179,8 +179,8 @@ public partial class MainWindow
 		this.button9.CanFocus = true;
 		this.button9.Name = "button9";
 		this.button9.UseUnderline = true;
-		this.button9.BorderWidth = ((uint)(27));
-		this.button9.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.button9.BorderWidth = ((uint)(15));
+		this.button9.Label = global::Mono.Unix.Catalog.GetString("Problem 9");
 		this.table4.Add(this.button9);
 		global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.table4[this.button9]));
 		w12.TopAttach = ((uint)(2));
@@ -200,8 +200,8 @@ public partial class MainWindow
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 396;
-		this.DefaultHeight = 479;
+		this.DefaultWidth = 200;
+		this.DefaultHeight = 350;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.button9.Pressed += new global::System.EventHandler(this.OnButton8Pressed);
